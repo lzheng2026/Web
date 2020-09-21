@@ -1,1 +1,109 @@
-Hello World 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+         body{
+            background-image: url(coolcity-copy.jpg);
+            background-size: cover;
+        }
+
+        table {
+            border: 1px solid black;
+            justify-content: center;
+        }
+
+        td {
+            width: 100px;
+            height: 70px;
+            border: 1px solid black;
+        }
+
+        th {
+            border: 1px solid black;
+            height: 70px;
+            font-size: 50px;
+        }
+
+        button {
+            height: 70px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4" id="formula">1+2</th>
+            </tr>
+            <tr>
+                <th colspan="4" id="result">3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button onclick="clean()">C</button></td>
+                <td><button onclick="input('(')">(</button></td>
+                <td><button onclick="input(')')">)</button></td>
+                <td><button onclick="input('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="input('7')">7</button></td>
+                <td><button onclick="input('8')">8</button></td>
+                <td><button onclick="input('9')">9</button></td>
+                <td><button onclick="input('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="input('4')">4</button></td>
+                <td><button onclick="input('5')">5</button></td>
+                <td><button onclick="input('6')">6</button></td>
+                <td><button onclick="input('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="input('1')">1</button></td>
+                <td><button onclick="input('2')">2</button></td>
+                <td><button onclick="input('3')">3</button></td>
+                <td><button onclick="input('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="input('0')">0</button></td>
+                <td><button onclick="input('.')">.</button></td>
+                <td><button onclick="">DEL</button></td>
+                <td><button onclick="calculate()">=</button></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <script>
+
+        function clean() {
+            formula.innerHTML = ""
+            result.innerHTML = ""
+        }
+
+        function input(btnName) {
+            let before = formula.innerHTML
+            formula.innerHTML = before + btnName
+        }
+
+        function calculate() {
+            let equation = formula.innerHTML
+            result.innerHTML = eval(equation)
+
+            try {
+                
+            } catch (error) {
+                
+            }
+        }
+    </script>
+</body>
+
+</html>
