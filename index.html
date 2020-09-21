@@ -1,109 +1,61 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Document</title>
+</head>
+
+<head>
     <style>
-         body{
-            background-image: url(coolcity-copy.jpg);
-            background-size: cover;
+        * {
+            padding: 0;
+            margin: 0;
         }
 
-        table {
-            border: 1px solid black;
-            justify-content: center;
+        body {
+            background-image: radial-gradient(circle at 40% 91%, rgba(251, 251, 251,0.04) 0%, rgba(251, 251, 251,0.04) 50%,rgba(229, 229, 229,0.04) 50%, rgba(229, 229, 229,0.04) 100%),radial-gradient(circle at 66% 97%, rgba(36, 36, 36,0.04) 0%, rgba(36, 36, 36,0.04) 50%,rgba(46, 46, 46,0.04) 50%, rgba(46, 46, 46,0.04) 100%),radial-gradient(circle at 86% 7%, rgba(40, 40, 40,0.04) 0%, rgba(40, 40, 40,0.04) 50%,rgba(200, 200, 200,0.04) 50%, rgba(200, 200, 200,0.04) 100%),radial-gradient(circle at 15% 16%, rgba(99, 99, 99,0.04) 0%, rgba(99, 99, 99,0.04) 50%,rgba(45, 45, 45,0.04) 50%, rgba(45, 45, 45,0.04) 100%),radial-gradient(circle at 75% 99%, rgba(243, 243, 243,0.04) 0%, rgba(243, 243, 243,0.04) 50%,rgba(37, 37, 37,0.04) 50%, rgba(37, 37, 37,0.04) 100%),linear-gradient(90deg, rgb(34, 222, 237),rgb(135, 89, 215));            height: 100vh;
         }
 
-        td {
-            width: 100px;
-            height: 70px;
-            border: 1px solid black;
+        header {
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10)px;
         }
 
-        th {
-            border: 1px solid black;
-            height: 70px;
-            font-size: 50px;
+        ul {
+            display: flex;
+            list-style: none;
+            line-height: 50px;
         }
 
-        button {
-            height: 70px;
-            width: 100px;
+        li {
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li:hover {
+            background: rgb(255, 255, 255, 0.6);
         }
     </style>
 </head>
 
 <body>
-    
-    <table>
-        <thead>
-            <tr>
-                <th colspan="4" id="formula">1+2</th>
-            </tr>
-            <tr>
-                <th colspan="4" id="result">3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><button onclick="clean()">C</button></td>
-                <td><button onclick="input('(')">(</button></td>
-                <td><button onclick="input(')')">)</button></td>
-                <td><button onclick="input('/')">/</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="input('7')">7</button></td>
-                <td><button onclick="input('8')">8</button></td>
-                <td><button onclick="input('9')">9</button></td>
-                <td><button onclick="input('*')">*</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="input('4')">4</button></td>
-                <td><button onclick="input('5')">5</button></td>
-                <td><button onclick="input('6')">6</button></td>
-                <td><button onclick="input('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="input('1')">1</button></td>
-                <td><button onclick="input('2')">2</button></td>
-                <td><button onclick="input('3')">3</button></td>
-                <td><button onclick="input('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="input('0')">0</button></td>
-                <td><button onclick="input('.')">.</button></td>
-                <td><button onclick="">DEL</button></td>
-                <td><button onclick="calculate()">=</button></td>
-            </tr>
-
-        </tbody>
-
-    </table>
-    <script>
-
-        function clean() {
-            formula.innerHTML = ""
-            result.innerHTML = ""
-        }
-
-        function input(btnName) {
-            let before = formula.innerHTML
-            formula.innerHTML = before + btnName
-        }
-
-        function calculate() {
-            let equation = formula.innerHTML
-            result.innerHTML = eval(equation)
-
-            try {
-                
-            } catch (error) {
-                
-            }
-        }
-    </script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Projects</a></li>
+                <li><a href="/">About</a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 
 </html>
