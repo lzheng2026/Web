@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <style>
+        body {
+            background-color: black;
+            background-image: url(scary.jpg);
+            background-size: cover;
+            justify-content: center;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            
+        }
+
+        #btn {
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            animation: shaking 0.3s infinite alternate;
+        }
+        #btn:hover {
+            background-color: black;
+            animation: shaking 0.1s infinite alternate;
+        }
+        @keyframes shaking {
+            from {
+                transform: translateX(-30px);
+            }
+
+            to {
+                transform: translateX(30px);
+            }
+        }
+
+        #pumpkin {
+            visibility: hidden;
+            width: 20px;
+            height: 15px;
+
+        }
+
+        @keyframes zoomin {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(100);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn" onclick="show()">DO NOT CLICK</button>
+    <audio src="wlaugh.mp3" id="wlaugh_music"></audio>
+    <img src="pumpkin.gif" id="pumpkin" alt="">
+    <script>
+        function show() {
+            wlaugh_music.play()
+            pumpkin.style.visibility = "visible"
+            pumpkin.style.animation = "zoomin 1s forwards";
+        }
+    </script>
+</body>
+
+</html>

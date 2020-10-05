@@ -1,3 +1,3 @@
 # Web
 A website that describes me
-https://github.com/lzheng2026/Web
+https://lzheng2026.github.io/Web/
